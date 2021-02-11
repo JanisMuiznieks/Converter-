@@ -9,10 +9,17 @@ import UIKit
 
 class AppInfoViewController: UIViewController {
 
+    @IBOutlet weak var appInfoLabel: UILabel!
+    @IBOutlet weak var appDescLabel: UILabel!
+    var infoText = String()
+    let appDescText = "This app is a bootcamp project!"
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        appDescLabel.text = appDescText
+        
+        if !infoText.isEmpty {
+            appInfoLabel.text = infoText
+        }
     }
     
 

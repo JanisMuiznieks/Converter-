@@ -55,5 +55,13 @@ class TempViewController: UIViewController {
     }
  //MARK: - Navigation
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "temperatureInfo" {
+        // Get the new view controller using segue.destination.
+            let vc = segue.destination as! AppInfoViewController
+        // Pass the selected object to the new view controller.
+            vc.infoText = "Here you can convert Celsius to Fahreinheit or Kelvin"
+    }
+    }
     
 }
